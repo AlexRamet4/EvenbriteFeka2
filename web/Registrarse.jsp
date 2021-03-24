@@ -27,6 +27,9 @@
     %>
     
     <body style="height: 100%">
+        
+        <%@include  file="./HtmlParts/navbar.html"%>
+
         <center>
             <h1 class="<%= registroCompletado ? "title" : "hidden title" %>"> <%= mensaje %> </h1>
         </center>
