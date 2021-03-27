@@ -34,10 +34,10 @@ public class ServletIniciarSesion extends HttpServlet {
         
         String mensaje = "";
         Usuario user = usuarioFacade.find(correo);
-        
+   
         if (user == null) {
             mensaje = "Ese correo no existe";
-        } else if (!user.getPassword().equals(password)) {
+        }else if (!user.getPassword().equals(password)) {
             mensaje = "La contraseña no es correcta";
         } else {
             mensaje = "ok";
@@ -46,7 +46,12 @@ public class ServletIniciarSesion extends HttpServlet {
         HttpSession session = req.getSession();
         session.setAttribute("mensajeInicioSesion", mensaje);
         
-        if (mensaje.equals("ok")) {
+        
+        if (mensaje.equals("ok") && user.getIdRol().getId() == 4){
+            RequestDispatcher rd;
+            rd = req.getRequestDispatcher("ListadoEstudios.jsp");
+            rd.forward(req, res); 
+        }else if (mensaje.equals("ok")) {
             RequestDispatcher rd;
             rd = req.getRequestDispatcher("PaginaPrincipal.jsp");
             rd.forward(req, res);
