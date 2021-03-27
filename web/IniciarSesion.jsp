@@ -13,39 +13,15 @@
         <title> EvenbriteFeka </title>
         <link rel="icon" type="image/png" href="https://cdn.evbstatic.com/s3-build/perm_001/8a4e23/django/images/favicons/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://cdn.evbstatic.com/s3-build/perm_001/477279/django/images/favicons/favicon-194x194.png" sizes="194x194">
-        
     </head>
-    <body style="height: 100%" class="bg-dark">
+    <body style="height: 100%">
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
+        <%@include  file="./HtmlParts/navbar.html" %>
         
-        <div class="d-flex flex-wrap align-items-center justify-content-center" style="height: 100%">
+        <form action="ServletIniciarSesion" method="POST" class="d-flex flex-wrap align-items-center justify-content-center" style="height: 100%">
             <div style="width: 20%">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Correo" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input type="text" name="correo" class="form-control" placeholder="Correo" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2">@example.com</span>
                 </div>
             
@@ -56,15 +32,15 @@
                             <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                         </svg>
                     </span>
-                    <input type="text" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+                    <input type="text" name="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
                 </div>
                 
                 <center>
                     <button class="btn btn-primary m-3" style="color: #fff; background-color: #3291ea;"> Iniciar sesión </button>
-                    <button id="registrarse" class="btn btn-danger m-3" style="color: #fff; background-color: #569678;"> Registrarse </button>
+                    <button type="button" id="registrarse" class="btn btn-danger m-3" style="color: #fff; background-color: #569678;"> Registrarse </button>
                 </center>
             </div>
-        </div>
+        </form>
             
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

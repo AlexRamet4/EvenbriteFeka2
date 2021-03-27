@@ -8,4 +8,3 @@ let botonRegistrar = document.querySelector("#registrarse");
 botonRegistrar.addEventListener('click', () => {
     location.href = "http://localhost:8080/Evenbrite/Registrarse.jsp";
 });
-

@@ -46,7 +46,6 @@ public class ServletRegistarse extends HttpServlet {
         
         String mensaje = "";
         Usuario user = usuarioFacade.find(correo);
-        //Usuario usuario = usuarioFacade.findAll().stream().filter(x -> x.getEmail().equals(correo)).findAny().get();
 
         if (!password.equals(confPassword)) {
             mensaje = "Las contraseñas no son iguales";
