@@ -4,6 +4,7 @@
     Author     : Javier
 --%>
 
+<%@page import="java.util.Enumeration"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,10 +16,8 @@
         <link rel="icon" type="image/png" href="https://cdn.evbstatic.com/s3-build/perm_001/477279/django/images/favicons/favicon-194x194.png" sizes="194x194">
     </head>
     <body>
-        <%@include  file="./HtmlParts/navbar.html" %>
+        <%@include  file="./HtmlParts/navbar2.jsp" %>
         <h1>Pagina principal</h1>
-        
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
 </html>
