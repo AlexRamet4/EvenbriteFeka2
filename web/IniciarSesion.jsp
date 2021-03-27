@@ -32,7 +32,7 @@
                             <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                         </svg>
                     </span>
-                    <input type="text" name="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
                 </div>
                 
                 <center>
