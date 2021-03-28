@@ -12,6 +12,7 @@ import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,6 +49,7 @@ public class ServletIniciarSesion extends HttpServlet {
         
         
         if (mensaje.equals("ok") && user.getIdRol().getId() == 4){
+            session.setAttribute("usuario", user.getEmail());
             RequestDispatcher rd;
             rd = req.getRequestDispatcher("ListadoEstudios.jsp");
             rd.forward(req, res); 
