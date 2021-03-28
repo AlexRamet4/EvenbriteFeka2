@@ -54,6 +54,7 @@ public class ServletIniciarSesion extends HttpServlet {
             rd = req.getRequestDispatcher("ListadoEstudios.jsp");
             rd.forward(req, res); 
         }else if (mensaje.equals("ok")) {
+            session.setAttribute("usuario", user.getEmail());
             RequestDispatcher rd;
             rd = req.getRequestDispatcher("PaginaPrincipal.jsp");
             rd.forward(req, res);
