@@ -19,7 +19,13 @@
         <%@include file="./HtmlParts/navbar2.jsp" %>
         
          <h1>Estudios Realizados:</h1>
-        
+       
+         
+         
+         
+         
+         
+         <a href="CrearEstudio.jsp">Nuevo estudio...</a>
         
     </body>
 </html>
