@@ -16,7 +16,7 @@
         
     </head>
     <body>
-        <%@include file="./HtmlParts/navbar.html" %>
+        <%@include file="./HtmlParts/navbar2.jsp" %>
         
          <h1>Estudios Realizados:</h1>
         

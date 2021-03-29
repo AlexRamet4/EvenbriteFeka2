@@ -15,7 +15,14 @@
         <link rel="icon" type="image/png" href="https://cdn.evbstatic.com/s3-build/perm_001/477279/django/images/favicons/favicon-194x194.png" sizes="194x194">
     </head>
     <body>
-        <%@include  file="./HtmlParts/navbar.html" %>
+         <%@include file="./HtmlParts/navbar2.jsp" %>
+         
+         <form action="ServletRegistrarse" method="POST" class="d-flex flex-column flex-wrap align-items-center justify-content-center" style="height: 100%">
+            
+            <input type="text" name="nombre" class="form-control size" placeholder="Nombre">
+            
+            
+         </form>
         
         
     </body>
