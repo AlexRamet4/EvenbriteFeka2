@@ -38,9 +38,7 @@
             
             <input type="text" name="nombre" class="form-control size" placeholder="Nombre">
 
-            <input type="text" name="primerApellido" class="form-control size" placeholder="Primer apellido">
-
-            <input type="text" name="segundoApellido" class="form-control size" placeholder="Segundo apellido">
+            <input type="text" name="apellidos" class="form-control size" placeholder="Apellidos">
 
             <input type="text" name="domicilio" class="form-control size" placeholder="Domicilio">
 
