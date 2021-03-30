@@ -34,8 +34,7 @@ public class ServletRegistarse extends HttpServlet {
             throws ServletException, IOException {
                 
         String nombre = new String(req.getParameter("nombre").getBytes("ISO-8859-1"), "UTF-8");
-        String primerApellido = new String(req.getParameter("primerApellido").getBytes("ISO-8859-1"), "UTF-8");
-        String segundoApellido = new String(req.getParameter("segundoApellido").getBytes("ISO-8859-1"), "UTF-8");
+        String apellidos = new String(req.getParameter("apellidos").getBytes("ISO-8859-1"), "UTF-8");
         String domicilio = new String(req.getParameter("domicilio").getBytes("ISO-8859-1"), "UTF-8");
         String edad = new String(req.getParameter("edad").getBytes("ISO-8859-1"), "UTF-8");
         String ciudad = new String(req.getParameter("ciudad").getBytes("ISO-8859-1"), "UTF-8");
@@ -52,7 +51,7 @@ public class ServletRegistarse extends HttpServlet {
         } else if (user != null) {
             mensaje = "Este correo ya está en uso";
         } else {
-            Usuario nuevoUsuario = new Usuario(correo, nombre, password, primerApellido, segundoApellido, domicilio, ciudad, sexo, Integer.parseInt(edad));
+            Usuario nuevoUsuario = new Usuario(correo, nombre, password, apellidos, domicilio, ciudad, sexo, Integer.parseInt(edad));
             nuevoUsuario.setIdRol(new Rol(3));
             usuarioFacade.create(nuevoUsuario);
             mensaje = "Has sido registrado con éxito!!!";
