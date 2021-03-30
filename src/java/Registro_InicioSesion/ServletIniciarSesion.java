@@ -5,9 +5,12 @@
  */
 package Registro_InicioSesion;
 
+import Entity.Evento;
+import Entity.EventoFacade;
 import Entity.Usuario;
 import dao.UsuarioFacade;
 import java.io.IOException;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,6 +26,9 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet(name = "ServletIniciarSesion", urlPatterns = {"/ServletIniciarSesion"})
 public class ServletIniciarSesion extends HttpServlet {
+
+    @EJB
+    private EventoFacade eventoFacade;
 
     @EJB
     private UsuarioFacade usuarioFacade;
@@ -47,7 +53,12 @@ public class ServletIniciarSesion extends HttpServlet {
         session.setAttribute("mensajeInicioSesion", mensaje);
         
         if (mensaje.equals("ok")) {
+            
+            List<Evento> eventos = eventoFacade.findAll();
+            
+            session.setAttribute("eventos", eventos);
             session.setAttribute("usuario", user.getEmail());
+
             RequestDispatcher rd;
             rd = req.getRequestDispatcher("PaginaPrincipal.jsp");
             rd.forward(req, res);
